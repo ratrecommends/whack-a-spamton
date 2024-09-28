@@ -1,0 +1,332 @@
+script: "/main/main.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+textures {
+  name: "assets"
+  texture: "/assets/assets.atlas"
+}
+nodes {
+  position {
+    x: 480.0
+    y: 320.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "root"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -235.0
+    y: -236.0
+  }
+  type: TYPE_TEMPLATE
+  id: "1"
+  parent: "root"
+  inherit_alpha: true
+  template: "/main/trash.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "1/fg"
+  parent: "1"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "1/box"
+  parent: "1"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "1/touch"
+  parent: "1"
+  template_node_child: true
+}
+nodes {
+  position {
+    x: -385.0
+    y: 198.0
+  }
+  type: TYPE_TEMPLATE
+  id: "char"
+  parent: "root"
+  inherit_alpha: true
+  template: "/main/character.gui"
+  enabled: false
+}
+nodes {
+  type: TYPE_BOX
+  id: "char/char"
+  parent: "char"
+  template_node_child: true
+}
+nodes {
+  position {
+    y: -236.0
+  }
+  type: TYPE_TEMPLATE
+  id: "2"
+  parent: "root"
+  inherit_alpha: true
+  template: "/main/trash.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "2/fg"
+  parent: "2"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "2/box"
+  parent: "2"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "2/touch"
+  parent: "2"
+  template_node_child: true
+}
+nodes {
+  position {
+    x: 241.0
+    y: -236.0
+  }
+  type: TYPE_TEMPLATE
+  id: "3"
+  parent: "root"
+  inherit_alpha: true
+  template: "/main/trash.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "3/fg"
+  parent: "3"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "3/box"
+  parent: "3"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "3/touch"
+  parent: "3"
+  template_node_child: true
+}
+nodes {
+  position {
+    x: -235.0
+    y: 83.0
+  }
+  type: TYPE_TEMPLATE
+  id: "4"
+  parent: "root"
+  inherit_alpha: true
+  template: "/main/trash.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "4/fg"
+  parent: "4"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "4/box"
+  parent: "4"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "4/touch"
+  parent: "4"
+  template_node_child: true
+}
+nodes {
+  position {
+    y: 83.0
+  }
+  type: TYPE_TEMPLATE
+  id: "5"
+  parent: "root"
+  inherit_alpha: true
+  template: "/main/trash.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "5/fg"
+  parent: "5"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "5/box"
+  parent: "5"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "5/touch"
+  parent: "5"
+  template_node_child: true
+}
+nodes {
+  position {
+    x: 241.0
+    y: 83.0
+  }
+  type: TYPE_TEMPLATE
+  id: "6"
+  parent: "root"
+  inherit_alpha: true
+  template: "/main/trash.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "6/fg"
+  parent: "6"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "6/box"
+  parent: "6"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "6/touch"
+  parent: "6"
+  template_node_child: true
+}
+nodes {
+  position {
+    x: -235.0
+    y: 363.0
+  }
+  type: TYPE_TEMPLATE
+  id: "7"
+  parent: "root"
+  inherit_alpha: true
+  template: "/main/trash.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "7/fg"
+  parent: "7"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "7/box"
+  parent: "7"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "7/touch"
+  parent: "7"
+  template_node_child: true
+}
+nodes {
+  position {
+    y: 363.0
+  }
+  type: TYPE_TEMPLATE
+  id: "8"
+  parent: "root"
+  inherit_alpha: true
+  template: "/main/trash.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "8/fg"
+  parent: "8"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "8/box"
+  parent: "8"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "8/touch"
+  parent: "8"
+  template_node_child: true
+}
+nodes {
+  position {
+    x: 241.0
+    y: 363.0
+  }
+  type: TYPE_TEMPLATE
+  id: "9"
+  parent: "root"
+  inherit_alpha: true
+  template: "/main/trash.gui"
+}
+nodes {
+  type: TYPE_BOX
+  id: "9/fg"
+  parent: "9"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "9/box"
+  parent: "9"
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "9/touch"
+  parent: "9"
+  template_node_child: true
+}
+nodes {
+  position {
+    y: 960.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+    z: 5.0
+  }
+  size {
+    x: 100.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "0\n"
+  ""
+  font: "default"
+  id: "points"
+  pivot: PIVOT_NW
+  inherit_alpha: true
+}
+layers {
+  name: "bg"
+}
+layers {
+  name: "character"
+}
+layers {
+  name: "fg"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

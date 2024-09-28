@@ -1,0 +1,28 @@
+textures {
+  name: "assets"
+  texture: "/assets/assets.atlas"
+}
+nodes {
+  scale {
+    x: 4.0
+    y: 4.0
+    z: 4.0
+  }
+  type: TYPE_BOX
+  texture: "assets/spamton"
+  id: "char"
+  layer: "character"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+layers {
+  name: "bg"
+}
+layers {
+  name: "character"
+}
+layers {
+  name: "fg"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

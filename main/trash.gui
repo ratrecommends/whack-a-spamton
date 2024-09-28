@@ -1,0 +1,59 @@
+textures {
+  name: "assets"
+  texture: "/assets/assets.atlas"
+}
+nodes {
+  scale {
+    x: 3.0
+    y: 3.0
+    z: 3.0
+  }
+  type: TYPE_BOX
+  texture: "assets/trash-fg"
+  id: "fg"
+  layer: "fg"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: 85.5
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+    z: 3.0
+  }
+  type: TYPE_BOX
+  texture: "assets/trash-bg"
+  id: "box"
+  layer: "bg"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 1.0
+    y: 50.0
+  }
+  size {
+    x: 200.0
+    y: 250.0
+  }
+  type: TYPE_BOX
+  id: "touch"
+  layer: "fg"
+  inherit_alpha: true
+  visible: false
+}
+layers {
+  name: "bg"
+}
+layers {
+  name: "character"
+}
+layers {
+  name: "fg"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

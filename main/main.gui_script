@@ -1,0 +1,77 @@
+local function hide_character(self, i)
+    local box = self.character_nodes[i]
+    self.characters[i] = nil
+    self.character_nodes[i] = nil
+    gui.animate(box, "position.y", gui.get_position(box).y - 100, gui.EASING_OUTCIRC, 0.5, 0, function() 
+        gui.delete_node(box)
+    end)
+end
+
+function init(self)
+    msg.post(".", "acquire_input_focus")
+    self.spawn_points = {}
+    self.touch_points = {}
+    self.characters = {}
+    self.character_nodes = {}
+    self.points = 0
+    for i = 1, 9 do
+        table.insert(self.spawn_points, gui.get_node(tostring(i) .. "/fg" ))
+        table.insert(self.touch_points, gui.get_node(tostring(i) .. "/touch" ))
+    end
+    math.randomseed(socket.gettime())
+    
+    local n = self.spawn_points[math.random(1,9)]
+    local x = gui.clone(gui.get_node("char/char"))
+    
+    gui.set_enabled(x, true)
+    gui.set_position(x, gui.get_position(n))
+    timer.delay(1, true, function()
+        local i = math.random(1, 9)
+        if not self.characters[i] then
+            local character = math.random() > 0.2 and "spamton" or "noelle"
+            self.characters[i] = character
+            local box = gui.clone(gui.get_node("char/char"))
+            gui.play_flipbook(box, character)
+            self.character_nodes[i] = box
+            gui.set_enabled(box, true)
+            local pos = gui.get_position(self.spawn_points[i])
+            gui.set_position(box, pos)
+            gui.animate(box, "position.y", pos.y + 100, gui.EASING_OUTBACK, 0.5)
+            if character == "noelle" then
+                timer.delay(2, false, function()
+                    if self.characters[i] == "noelle" then
+                        hide_character(self, i)
+                    end
+                end)
+            end
+        end
+    end)
+end
+
+function update(self, dt)
+    -- Add update code here
+    -- Learn more: https://defold.com/manuals/script/
+    -- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+    -- Add message-handling code here
+    -- Learn more: https://defold.com/manuals/message-passing/
+    -- Remove this function if not needed
+end
+
+
+
+function on_input(self, action_id, action)
+    if action_id == hash("touch") and action.pressed then
+        for i = 1, 9 do
+            if gui.pick_node(self.touch_points[i], action.x, action.y) and self.characters[i] then
+                local character = self.characters[i]
+                local dp = character == "spamton" and 1 or -5
+                self.points = self.points + dp
+                gui.set_text(gui.get_node("points"), tostring(self.points))
+                hide_character(self, i)
+            end
+        end
+    end
+end

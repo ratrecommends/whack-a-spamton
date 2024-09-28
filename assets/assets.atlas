@@ -1,0 +1,13 @@
+images {
+  image: "/assets/spamton.png"
+}
+images {
+  image: "/assets/trash-bg.png"
+}
+images {
+  image: "/assets/trash-fg.png"
+}
+images {
+  image: "/assets/noelle.png"
+}
+extrude_borders: 2
